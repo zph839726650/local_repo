@@ -25,10 +25,11 @@ public class ItemController {
 	
 	@Value("${server.port}")
 	private int port;
-	
+	//注解
 	@GetMapping("/{orderId}")
 	public JsonResult<List<Item>> getItems(@PathVariable String orderId) throws Exception {
 		log.info("server.port="+port+", orderId="+orderId);
+		
 
         ///--设置随机延迟
 		long t = new Random().nextInt(5000);
